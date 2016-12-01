@@ -1,7 +1,7 @@
 //CONTROLLER	
 townSquareApp.controller('settingController', ['$scope', '$http',  function($scope, $http){
 
- $http.get('/assets/json/socialmedia.json')
+ $http.get('assets/json/socialmedia.json')
 	       .then(function(res){
 	          $scope.socialmedia = res.data;                
 	       });

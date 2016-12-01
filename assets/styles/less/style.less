@@ -1,8 +1,16 @@
 
+@bgColor: #fbfbfb;
+@globalFontColor: #555e65;
+@boxBlock: #fafafa;
+@boxBlockBorder: #e8e8e8;
+@socialHeader: #edeef0;
+@socialIconDefaultColor:#555E65;
+@socialIconFullColor:#13ACB0;
+
 
 body {
-background-color:#fbfbfb;
-color:#555e65;
+background-color:@bgColor;
+color:@globalFontColor;
 }
 
 .page-head {
@@ -25,8 +33,8 @@ color:#555e65;
 	}
 	
 	.box-block {
-		background-color:#fafafa;
-		border: 3px solid #e8e8e8;
+		background-color:@boxBlock;
+		border: 3px solid @boxBlockBorder;
 		padding:20px;
 	    box-sizing: border-box;
 	    -moz-box-sizing: border-box;
@@ -34,7 +42,7 @@ color:#555e65;
 	}
 	
 	.social-head {
-		background-color:#edeef0;
+		background-color:@socialHeader;
 		padding: 20px;
 		font-weight:bold;
 	}
@@ -69,9 +77,9 @@ color:#555e65;
 }
 
 .default {
-	color:#555E65;
+	color:@socialIconDefaultColor;
 }
 
 .fullColor {
-	color:#13ACB0;
+	color:@socialIconFullColor;
 }
