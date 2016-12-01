@@ -1,0 +1,44 @@
+<div class="page-head">
+<div class="row">
+  <div class="col-md-12">
+    <h1><i class="fa fa-cog" aria-hidden="true"></i> Global Settings</h1>
+  </div>
+</div>
+</div>
+
+
+
+<div class="row">
+ <div class="col-md-12">
+
+  <div class="tabbable tabs-left">
+    <ul class="nav nav-tabs" ng-init='main.active.tab = "info"'>
+       <li ng-class="{active: main.active.tab == 'info'}">
+       	 <a ng-click='main.active.tab = "info"'><i class="fa fa-globe" aria-hidden="true"></i> Site Info</a>
+       </li>
+       <li ng-class="{active: main.active.tab == 'contact'}">
+       	 <a ng-click='main.active.tab = "contact"'><i class="fa fa-phone" aria-hidden="true"></i> Business Contact</a>
+       </li>
+       <li ng-class="{active: main.active.tab == 'dashboard'}">
+       	 <a ng-click='main.active.tab = "dashboard"'><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard Info</a>
+       </li>
+    </ul>
+  </div>
+
+
+  <div class="tab-content">
+     <div ng-switch='main.active.tab'>
+        <div ng-switch-when="info">
+        	<div ng-include='"/partials/info.html"'></div>
+        </div>  
+        <div ng-switch-when="contact">
+        	<div ng-include='"/partials/contact.html"'></div>
+        </div>  
+        <div ng-switch-when="dashboard">
+        	<div ng-include='"/partials/dashboard.html"'></div>
+        </div>   
+     </div>
+  </div>
+
+ </div>
+</div>

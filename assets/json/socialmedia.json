@@ -1,0 +1,12 @@
+[{ "icon":"fa fa-facebook-square", "name":"Face Book", "url":"facebook.com/" },
+ { "icon":"fa fa-twitter-square", "name":"Twitter", "url":"twitter.com"},
+ { "icon":"fa fa-linkedin-square", "name":"Linkedin", "url":"linkedin.com/in/"},
+ { "icon":"fa fa-linkedin-square", "name":"Linkedin Company", "url":"linkedin.com/company/"},
+ { "icon":"fa fa-google-plus-square", "name":"Google Plus", "url":"plus.google.com/"},
+ { "icon":"fa fa-youtube-square", "name":"YouTube", "url":"youtube.com/"},
+ { "icon":"fa fa-flickr", "name":"Flickr", "url":"flickr.com/"},
+ { "icon":"fa fa-vimeo-square", "name":"Vimeo", "url":"vimeo.com/"},
+ { "icon":"fa fa-pinterest-square", "name":"Pinterest", "url":"pinterest.com/"},
+ { "icon":"fa fa-instagram", "name":"Instagram", "url":"followgram.com/"},
+ { "icon":"fa fa-foursquare", "name":"Foursquare", "url":"foursquare.com/"},
+ { "icon":"fa fa-tumblr-square", "name":"Tumblr", "url":".tumblr.com"}]

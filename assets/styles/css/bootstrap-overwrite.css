@@ -1,0 +1,45 @@
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  background-color: #fbfbfb;
+}
+
+.nav-tabs > li > a {
+    border-radius: 0;
+}
+
+
+a {
+    color: #2fd3d5;
+}
+
+.form-control::-moz-placeholder {
+    color: #e2e3e7;
+    opacity: 1;
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.btn-on {
+	background-color:#ffffff;
+}
+
+
+.btn-off {
+  background-color:#ffffff;
+}
+
+
+.btn.active, .btn:active {
+    background-color:#14afb3;
+    color: #ffffff;	
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+    outline: 0 none;
+}
+
+.btn-teal {
+   background-color:#14afb3;
+   color: #ffffff;	
+}
