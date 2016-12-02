@@ -28,7 +28,7 @@
    </div>
 </div>
 
-<form id="social-url">
+<form id="social-form-info">
  <div class="row box-block">
       <div class="col-md-6">
         <div class="social-head">
@@ -37,10 +37,10 @@
 
          <div class="btn-group pull-right" data-toggle="buttons">
 		  <label class="btn btn-on" ng-click="changeSocialColor(1)">
-		    <input type="radio" name="options" id="option1" autocomplete="off" ng-model="radioSocial" ng-value="1"> ON
+		    <input type="radio" name="options" autocomplete="off" ng-model="radioSocial" ng-value="1"> ON
 		  </label>
 		  <label class="btn btn-off active" ng-click="changeSocialColor(2)">
-		    <input type="radio" name="options" id="option2" autocomplete="off" ng-model="radioSocial" ng-value="2"> OFF
+		    <input type="radio" name="options" autocomplete="off" ng-model="radioSocial" ng-value="2"> OFF
 		  </label>
 		</div>
 
@@ -52,6 +52,7 @@
            <li class="social-icons" ng-repeat="social in socialmedia">
             <i ng-class="iconColor" class="{{social.icon}}" aria-hidden="true"></i> 
             <span>{{social.name}}</span>
+           <!-- <span class="smallTxt">Preview</span> -->
            </li>
           </ul>  
         </div>
@@ -72,7 +73,7 @@
             <li class="social-inputs" ng-repeat="social in socialmedia">
            <div class="input-group">
 		      <div class="input-group-addon">{{social.url}}</div>
-		      <input type="text" class="form-control" id="{{social.name}}" ng-model="screenname" ng-change="getScreenname(screenname)" placeholder="Screenname">
+		      <input type="text" class="form-control" id="{{social.name}}" ng-model="screenname"  placeholder="Screenname">
 		    </div>
 		    </li>
 		   </ul> 
