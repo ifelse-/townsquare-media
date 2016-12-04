@@ -1,3 +1,12 @@
+townSquareApp.directive("stateDropDown", function() {
+    return {
+        restrict : "E",
+        templateUrl : "/directives/states.html"
+    };
+});
+
+
+
 //CONTROLLER	
 townSquareApp.controller('settingController', ['$scope', 'socialMediaData', 'contactData',  function($scope, socialMediaData, contactData){
 

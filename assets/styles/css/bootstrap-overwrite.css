@@ -62,3 +62,46 @@ a {
 .form-control {
   border-radius:0;
 }
+
+
+
+
+.selectdiv {
+     float: left;
+    margin-top: -5px;
+    min-width: 222px;
+    position: relative;
+    width: 336px;
+}
+
+.selectdiv:after {
+    content: '\f078';
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #999;
+    right: 11px;
+    top: 6px;
+    height: 34px;
+    padding: 9px 0px 0px 8px;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+display: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  
+-moz-appearance: none;
+    background-color: #ffffff;
+    background-image: none;
+    color: #333;
+     line-height: 1.75;
+    margin: 5px 0;
+    word-break: normal;
+}
