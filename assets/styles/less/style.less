@@ -1,168 +1,148 @@
-
 @bgColor: #fbfbfb;
 @globalFontColor: #555e65;
 @boxBlock: #fafafa;
 @boxBlockBorder: #e8e8e8;
 @socialHeader: #edeef0;
-
-
+@ribbonColor: #9F56D9;
 
 body {
-background-color:@bgColor;
-color:@globalFontColor;
+    background-color: @bgColor;
+    color: @globalFontColor;
 }
-
-
 .bold {
-	font-weight:bold;
+    font-weight: bold;
 }
-
 .page-head {
-	margin: 5rem 0;
-	
-	h1{
-		font-size:25px;
-	}
+    margin: 5rem 0;
+    h1 {
+        font-size: 25px;
+    }
 }
-
 .smallTxt {
-	font-size:12px;
+    font-size: 12px;
 }
-
+//Tab 
 .tab-content {
-	margin:5rem 0;
-    
+    margin: 5rem 0;
     p {
-    	font-size:14px;
+        font-size: 14px;
     }
-	
-	h2 {
-		font-size:16px;
-	}
-	
-	.form-group {
-		margin:2.1em 0;
-	}
-	
-	.box-block {
-		background-color:@boxBlock;
-		border: 3px solid @boxBlockBorder;
-		padding:20px;
-	    box-sizing: border-box;
-	    -moz-box-sizing: border-box;
-	    margin: 0;
-	      
-	      h3 {
-	      	font-size: 20px;
+    h2 {
+        font-size: 16px;
+    }
+    .form-group {
+        margin: 2.1em 0;
+    }
+    .box-block {
+        background-color: @boxBlock;
+        border: 3px solid @boxBlockBorder;
+        padding: 20px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        margin: 0;
+        h3 {
+            font-size: 20px;
             margin: 5px 0 0;
-	      }
-	}
-	
-
-	.social-head {
-		background-color:@socialHeader;
-		padding: 20px;
-		font-weight:bold;
-	}
-	
-	.social-icons {
-		height:34px;
-	}
-	
-	.social-sets ul li {
-	    margin: 1.5em 0;
-
-	}
-	
-
-	ul {
-      padding:0;
-      list-style-type: none;
-      font-size: 19px;
-
-       li {
-	    padding: 0;
-       }
-       
-	}
-	
-	span {
-       	margin: 0 0 0 10px;
+        }
     }
-	
-	.goLong {
-		width:100%;
-	}
-	
-	
+    .social-head {
+        background-color: @socialHeader;
+        padding: 20px;
+        font-weight: bold;
+    }
+    .social-icons {
+        height: 34px;
+    }
+    .social-sets ul li {
+        margin: 1.5em 0;
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        font-size: 19px;
+        li {
+            padding: 0;
+        }
+    }
+    span {
+        margin: 0 0 0 10px;
+    }
+    .goLong {
+        width: 100%;
+    }
 }
+//Tab Ends
 
-.form-group.margin-fix {
-	margin:0 0 2.1em 0;
-}
-
-.page-foot {
-	margin-top:20px;
-}
-
-
+//Box Style
 .box {
-	background-color:#ffffff;
-	padding:20px;
-	border:1px solid #ccc;
-	font-size: 15px;
-	margin-top: 30px;
-	height: 230px;
-	
-	p {
-		line-height:10px;
-	}
-	
-	.box-number {
-		margin-top: 3em;
-	}
-	
-	ul {
-      padding:0;
-      list-style-type: none;
-       li {
-	    padding: 0;
-       }
-	}
-	span {
-       	margin: 0 0 0 0px;
-       }
-       
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-top: 30px;
+    height: 230px;
+    p {
+        line-height: 10px;
+    }
+    .box-number {
+        margin-top: 3em;
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        li {
+            padding: 0;
+        }
+    }
+    span {
+        margin: 0 0 0 0px;
+    }
     .box-actions {
-    position:absolute;
-    bottom:18px;
-    width: 93%;}   
+        position: absolute;
+        bottom: 18px;
+        width: 93%;
+    }
 }
+//Box Style End
 
-
+//Ribbon
 .ribbon-wrap {
-	position: absolute;
+    position: absolute;
     right: 26px;
     top: 27px;
-	
     /* head */
-	#ribbon-head { 
-	background-color: #9F56D9;
-    display: block;
-    height: 10px;
-    width: 30px;}
-	  
-	/* tail */
-	#ribbon-tail { display: table-row; }
-	#left, #right {
-	border-bottom: 10px solid transparent;
-    border-top: 20px solid #9F56D9;
-    display: table-cell;
-    height: 0;
-    width: 0; }
-	#left { border-left: 15px solid #9F56D9; }
-	#right { border-right: 15px solid #9F56D9; }
-	
+    
+    #ribbon-head {
+        background-color: @ribbonColor;
+        display: block;
+        height: 10px;
+        width: 30px;
+    }
+    /* tail */
+    
+    #ribbon-tail {
+        display: table-row;
+    }
+    #left,
+    #right {
+        border-bottom: 10px solid transparent;
+        border-top: 20px solid @ribbonColor;
+        display: table-cell;
+        height: 0;
+        width: 0;
+    }
+    #left {
+        border-left: 15px solid @ribbonColor;
+    }
+    #right {
+        border-right: 15px solid @ribbonColor;
+    }
 }
+//Ribbon Ends
 
-
+.form-group.margin-fix {
+    margin: 0 0 2.1em 0;
+}
+.page-foot {
+    margin-top: 20px;
+}

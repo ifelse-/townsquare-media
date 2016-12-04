@@ -1,5 +1,5 @@
 [{ "icon":"fa fa-facebook-square", "name":"Face Book", "url":"facebook.com/", "color":"#3B5998"},
- { "icon":"fa fa-twitter-square", "name":"Twitter", "url":"twitter.com", "color":"#1DA1F2"},
+ { "icon":"fa fa-twitter-square", "name":"Twitter", "url":"twitter.com/", "color":"#1DA1F2"},
  { "icon":"fa fa-linkedin-square", "name":"Linkedin", "url":"linkedin.com/in/", "color":"#0177B5"},
  { "icon":"fa fa-linkedin-square", "name":"Linkedin Company", "url":"linkedin.com/company/", "color":"#0177B5"},
  { "icon":"fa fa-google-plus-square", "name":"Google Plus", "url":"plus.google.com/", "color":"#DE4C3F"},

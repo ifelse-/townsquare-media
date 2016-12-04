@@ -1,30 +1,11 @@
-townSquareApp.directive("stateDropDown", function() {
-    return {
-        restrict : "E",
-        templateUrl : "/directives/states.html"
-    };
-});
-
-
-
 //CONTROLLER	
 townSquareApp.controller('settingController', ['$scope', 'socialMediaData', 'contactData',  function($scope, socialMediaData, contactData){
 
-/*
- $http.get('assets/json/socialmedia.json')
-	       .then(function(res){
-	          $scope.socialmedia = res.data;    
-	       });
+$scope.iconColor = false;
+$scope.showSocialUrl = false;
 
 
- $http.get('assets/json/contacts.json')
-	       .then(function(contact){
-	          $scope.contacts = contact.data;  
-
-	       });
-
-*/
-
+/************** Data ***************/
 
 socialMediaData.then(function(res){
 	  $scope.socialmedia = res.data;    
@@ -34,8 +15,9 @@ contactData.then(function(contact){
 	  $scope.contacts = contact.data;  
    });
 
-$scope.iconColor = false;
-$scope.showSocialUrl = false;
+/************** Data End ***************/
+
+
 
 /************** Contact Page ***************/
 $scope.editedContacts = {};
@@ -108,8 +90,6 @@ $scope.addNewContact = function() {
 }
 
 
-$scope.oldvalue = []
-
 $scope.primaryCheck = function($index) {
 	//$scope.primary = false;
 	
@@ -123,6 +103,9 @@ $scope.primaryCheck = function($index) {
 
 /************** Contact Page Ends **************/
 
+
+
+/************** Site Info ***************/
 
 
 //Change icon color
@@ -139,9 +122,12 @@ $scope.changeSocialColor = function (value) {
 //Save social media urls
 $scope.saveSocialMedia = function(){
 
-$scope.socialMediaObj = {}
-$scope.socialMediaArr = []	
 $scope.showSocialUrl = true;
+
+$scope.socialMediaIdArr = [];
+$scope.socialMediaValueArr = [];
+$scope.socialMediaArr = [];
+$scope.socialMediaObj = {}
 
 
   var elements = document.getElementById("social-form-info").elements;
@@ -149,23 +135,37 @@ $scope.showSocialUrl = true;
 	for (var i = 0, element; element = elements[i++];) {
 	    if (element.value !== "" && element.id !== ""){
 
-	    	$scope.socialMediaObj = {
-					socialUrl:null,
-					userUrl:null
-				}
+	    	$scope.socialMediaIdArr.push(element.id);
+	    	$scope.socialMediaValueArr.push(element.value);
 
-	    		$scope.socialMediaObj.socialUrl = element.id,
-	    		$scope.socialMediaObj.userUrl = element.value
-
-             //console.log('element.value ' + element.value)
-	         //console.log('element.id ' +element.id)
-	         $scope.socialMediaArr.push($scope.socialMediaObj);
 	    }
 	}
 
-	//console.log($scope.socialMediaArr);
-	$scope.socialMediaUrls = $scope.socialMediaArr;
+	for (i = 0; i < $scope.socialMediaIdArr.length; i++) {
+    
+		$scope.socialMediaObj = {
+					icon:null,
+					iconColor:null,
+					name:null,
+					url:null,
+					link:null
+				}
+
+
+		$scope.socialMediaObj.icon = $scope.socialmedia[$scope.socialMediaIdArr[i]].icon;
+		$scope.socialMediaObj.iconColor = $scope.socialmedia[$scope.socialMediaIdArr[i]].color;		
+		$scope.socialMediaObj.name = $scope.socialmedia[$scope.socialMediaIdArr[i]].name;
+		$scope.socialMediaObj.url = $scope.socialmedia[$scope.socialMediaIdArr[i]].url;
+	    $scope.socialMediaObj.link = $scope.socialMediaValueArr[i]; 		
+       	$scope.socialMediaArr.push($scope.socialMediaObj);
+
+    }
+
+        //console.log($scope.socialMediaArr);
+     	$scope.socialMediaPreview = $scope.socialMediaArr;
+
 }   
 
-
 }]);
+
+/************** Site Info End ***************/

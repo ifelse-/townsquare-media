@@ -1,79 +1,63 @@
-
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-  background-color: #fbfbfb;
+/* Nav */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+    background-color: #fbfbfb;
 }
-
 .nav-tabs > li > a {
     border-radius: 0;
 }
-
-
 a {
     color: #2fd3d5;
 }
-
-
 .nav > li {
     cursor: pointer;
 }
-
 .form-control::-moz-placeholder {
     color: #e2e3e7;
     opacity: 1;
 }
-
+/* Buttons */
 .btn {
-	border-radius: 0;
+    border-radius: 0;
 }
-
 .btn-on {
-	background-color:#ffffff;
+    background-color: #ffffff;
 }
-
-
 .btn-off {
-  background-color:#ffffff;
+    background-color: #ffffff;
 }
-
-
-.btn.active, .btn:active {
-    background-color:#14afb3;
-    color: #ffffff;	
+.btn.active,
+.btn:active {
+    background-color: #14afb3;
+    color: #ffffff;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
     outline: 0 none;
 }
-
 .btn-teal {
-   background-color:#14afb3;
-   color: #ffffff;	
+    background-color: #14afb3;
+    color: #ffffff;
 }
-
 .btn-purple {
-   background-color:#9f56d9;
-   color: #ffffff;
+    background-color: #9f56d9;
+    color: #ffffff;
 }
-
+/* Form */
 .input-group-addon {
     background-color: #fbfbfb;
     color: #b2b7bd;
 }
-
 .form-control {
-  border-radius:0;
+    border-radius: 0;
 }
-
-
-
-
+/* Custom select dropdown */
 .selectdiv {
-     float: left;
+    float: left;
     margin-top: -5px;
     min-width: 222px;
     position: relative;
     width: 336px;
 }
-
 .selectdiv:after {
     content: '\f078';
     font: normal normal normal 14px/1 FontAwesome;
@@ -85,23 +69,22 @@ a {
     position: absolute;
     pointer-events: none;
 }
-
 /* IE11 hide native button (thanks Matt!) */
-select::-ms-expand {
-display: none;
-}
 
+select::-ms-expand {
+    display: none;
+}
 .selectdiv select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* Add some styling */
-  
--moz-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+    
+    -moz-appearance: none;
     background-color: #ffffff;
     background-image: none;
     color: #333;
-     line-height: 1.75;
+    line-height: 1.75;
     margin: 5px 0;
     word-break: normal;
 }
