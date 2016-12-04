@@ -13,6 +13,11 @@ a {
     color: #2fd3d5;
 }
 
+
+.nav > li {
+    cursor: pointer;
+}
+
 .form-control::-moz-placeholder {
     color: #e2e3e7;
     opacity: 1;
@@ -47,4 +52,13 @@ a {
 .btn-purple {
    background-color:#9f56d9;
    color: #ffffff;
+}
+
+.input-group-addon {
+    background-color: #fbfbfb;
+    color: #b2b7bd;
+}
+
+.form-control {
+  border-radius:0;
 }

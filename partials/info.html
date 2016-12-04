@@ -1,6 +1,6 @@
  <div class="row">
    <div class="col-md-12">
-    <h2>General Name</h2>
+    <h2>General Info</h2>
    </div>
 </div>
 
@@ -33,7 +33,7 @@
       <div class="col-md-6">
         <div class="social-head">
          
-         <div class="pull-left">Full Color Icons</div>
+         <div class="pull-left"><h3>Full Color Icons</h3></div>
 
          <div class="btn-group pull-right" data-toggle="buttons">
 		  <label class="btn btn-on" ng-click="changeSocialColor(1)">
@@ -50,7 +50,17 @@
         <div class="social-sets">
           <ul>
            <li class="social-icons" ng-repeat="social in socialmedia">
-            <i ng-class="iconColor" class="{{social.icon}}" aria-hidden="true"></i> 
+
+
+
+            <span ng-if="iconColor == false">
+            <i ng-class="default" class="{{social.icon}} fa-lg" aria-hidden="true"></i> 
+            </span>
+            <span ng-if="iconColor == true">
+            <i style="color:{{social.color}}" class="{{social.icon}} fa-lg" aria-hidden="true"></i> 
+            </span>
+
+
             <span>{{social.name}}</span>
            <!-- <span class="smallTxt">Preview</span> -->
            </li>
@@ -59,11 +69,11 @@
       </div>
       <div class="col-md-6">
          <div class="social-head">
-          <div class="pull-left">Social Module Title</div>
+          <div class="pull-left"><h3>Social Module Title</h3></div>
 
          <div class="input-group pull-right col-md-3">
 		      <input type="text" class="form-control" placeholder="Find Us">
-		       <div class="input-group-addon"></div> 
+		       <div class="input-group-addon"><i class="fa fa-eye-slash" aria-hidden="true"></i></div> 
 		  </div>
 
 		 <div class="clearfix"></div> 
@@ -71,10 +81,18 @@
         <div class="social-sets">
           <ul>
             <li class="social-inputs" ng-repeat="social in socialmedia">
-           <div class="input-group">
-		      <div class="input-group-addon">{{social.url}}</div>
-		      <input type="text" class="form-control" id="{{social.name}}" ng-model="screenname"  placeholder="Screenname">
-		    </div>
+           
+           <div ng-hide="social.name === 'Tumblr'" class="input-group">
+  		      <div class="input-group-addon">{{social.url}}</div>
+  		      <input type="text" class="form-control" id="{{social.url}}" placeholder="Screenname">
+		       </div>
+
+           <div ng-hide="social.name !== 'Tumblr'" class="input-group">
+            <input type="text" class="form-control" id="{{social.url}}" placeholder="Screenname">
+             <div class="input-group-addon">{{social.url}}</div>
+           </div>
+
+
 		    </li>
 		   </ul> 
         </div>
@@ -85,8 +103,31 @@
  <div class="col-md-12">
   <div class="pull-right">
  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
- <button type="submit" ng-click="save()" class="btn btn-teal">Save</button>
+ <button type="submit" ng-click="saveSocialMedia()" class="btn btn-teal">Save</button>
  </div>
  </div>
 </div> 
 </form>
+
+
+<div ng-if="showSocialUrl === true"> 
+ <div class="row">
+   <div class="col-md-12">
+    <h2>My Social Media</h2>
+   </div>
+</div>
+
+
+ <div class="row box-block">
+   <div class="col-md-12">
+      <div class="social-sets">
+          <ul>
+           <li class="social-icons" ng-repeat="url in socialMediaUrls">
+             <span>{{$index + 1}}.</span> <a href="http://{{url.socialUrl}}{{url.userUrl}}" target="_blank">http://{{url.socialUrl}}{{url.userUrl}}</a>
+           </li>
+          </ul>  
+        </div>
+   </div>
+</div>
+</div>
+

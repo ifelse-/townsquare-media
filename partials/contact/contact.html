@@ -1,0 +1,17 @@
+<div ng-switch on="main.contactPage">
+  <div ng-switch-when="contact">
+    <div ng-include='"partials/contact/contact-form.html"'></div>   
+  </div> 
+  <div ng-switch-when="mycontact">
+    <div ng-include='"partials/contact/mycontact.html"'></div>
+  </div> 
+  <div ng-switch-default>
+   <div ng-include='"partials/contact/contact-form.html"'></div>
+  </div>
+
+</div>
+
+
+
+
+

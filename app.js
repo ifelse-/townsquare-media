@@ -8,6 +8,6 @@ townSquareApp.config(function ($routeProvider) {
         templateUrl: 'partials/home.html',
         controller: 'settingController'
     })
-    
+
 	
 });

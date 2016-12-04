@@ -17,7 +17,7 @@
        	 <a ng-click='main.active.tab = "info"'><i class="fa fa-globe" aria-hidden="true"></i> Site Info</a>
        </li>
        <li ng-class="{active: main.active.tab == 'contact'}">
-       	 <a ng-click='main.active.tab = "contact"'><i class="fa fa-phone" aria-hidden="true"></i> Business Contact</a>
+       	 <a ng-click='main.active.tab = "contact"'><i class="fa fa-phone" aria-hidden="true"></i> Business Contacts</a>
        </li>
        <li ng-class="{active: main.active.tab == 'dashboard'}">
        	 <a ng-click='main.active.tab = "dashboard"'><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard Info</a>
@@ -32,7 +32,7 @@
         	<div ng-include='"partials/info.html"'></div>
         </div>  
         <div ng-switch-when="contact">
-        	<div ng-include='"partials/contact.html"'></div>
+        	<div ng-include='"partials/contact/contact.html"'></div>
         </div>  
         <div ng-switch-when="dashboard">
         	<div ng-include='"partials/dashboard.html"'></div>

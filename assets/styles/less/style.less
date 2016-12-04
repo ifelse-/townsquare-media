@@ -4,8 +4,7 @@
 @boxBlock: #fafafa;
 @boxBlockBorder: #e8e8e8;
 @socialHeader: #edeef0;
-@socialIconDefaultColor:#555E65;
-@socialIconFullColor:#13ACB0;
+
 
 
 body {
@@ -13,8 +12,17 @@ background-color:@bgColor;
 color:@globalFontColor;
 }
 
+
+.bold {
+	font-weight:bold;
+}
+
 .page-head {
 	margin: 5rem 0;
+	
+	h1{
+		font-size:25px;
+	}
 }
 
 .smallTxt {
@@ -23,6 +31,10 @@ color:@globalFontColor;
 
 .tab-content {
 	margin:5rem 0;
+    
+    p {
+    	font-size:14px;
+    }
 	
 	h2 {
 		font-size:16px;
@@ -39,8 +51,14 @@ color:@globalFontColor;
 	    box-sizing: border-box;
 	    -moz-box-sizing: border-box;
 	    margin: 0;
+	      
+	      h3 {
+	      	font-size: 20px;
+            margin: 5px 0 0;
+	      }
 	}
 	
+
 	.social-head {
 		background-color:@socialHeader;
 		padding: 20px;
@@ -56,17 +74,21 @@ color:@globalFontColor;
 
 	}
 	
+
 	ul {
       padding:0;
       list-style-type: none;
+      font-size: 19px;
+
        li {
-       	font-size: 19px;
 	    padding: 0;
        }
-       span {
-       	margin: 0 0 0 10px;
-       }
+       
 	}
+	
+	span {
+       	margin: 0 0 0 10px;
+    }
 	
 	.goLong {
 		width:100%;
@@ -83,10 +105,64 @@ color:@globalFontColor;
 	margin-top:20px;
 }
 
-.default {
-	color:@socialIconDefaultColor;
+
+.box {
+	background-color:#ffffff;
+	padding:20px;
+	border:1px solid #ccc;
+	font-size: 15px;
+	margin-top: 30px;
+	height: 230px;
+	
+	p {
+		line-height:10px;
+	}
+	
+	.box-number {
+		margin-top: 3em;
+	}
+	
+	ul {
+      padding:0;
+      list-style-type: none;
+       li {
+	    padding: 0;
+       }
+	}
+	span {
+       	margin: 0 0 0 0px;
+       }
+       
+    .box-actions {
+    position:absolute;
+    bottom:18px;
+    width: 93%;}   
 }
 
-.fullColor {
-	color:@socialIconFullColor;
+
+.ribbon-wrap {
+	position: absolute;
+    right: 26px;
+    top: 27px;
+	
+    /* head */
+	#ribbon-head { 
+	background-color: #9F56D9;
+    display: block;
+    height: 10px;
+    width: 30px;}
+	  
+	/* tail */
+	#ribbon-tail { display: table-row; }
+	#left, #right {
+	border-bottom: 10px solid transparent;
+    border-top: 20px solid #9F56D9;
+    display: table-cell;
+    height: 0;
+    width: 0; }
+	#left { border-left: 15px solid #9F56D9; }
+	#right { border-right: 15px solid #9F56D9; }
+	
 }
+
+
