@@ -1,5 +1,5 @@
 //CONTROLLER	
-townSquareApp.controller('settingController', ['$scope', 'socialMediaData', 'contactData',  function($scope, socialMediaData, contactData){
+townSquareApp.controller('settingController', ['$scope', '$timeout', 'socialMediaData', 'contactData',  function($scope, $timeout, socialMediaData, contactData){
 
 $scope.iconColor = false;
 $scope.showSocialUrl = false;
@@ -45,6 +45,8 @@ $scope.addContact = function(){
         });
 
     $scope.main.contactPage = 'mycontact';
+    callAlertMsg("New contact added successfully")
+    
 }
 
 $scope.editContact = function($index) {
@@ -65,11 +67,13 @@ $scope.editContact = function($index) {
 $scope.updateContact = function(){
 	 angular.copy($scope.editedContacts, $scope.contacts[$scope.$index]) 
      $scope.main.contactPage = 'mycontact';
+     callAlertMsg("Updated contact successfully")
 }
 
 $scope.removeContact = function($index){
 	 $scope.contacts.splice($index,1);
 	 $scope.main.contactPage = 'mycontact';
+	 callAlertMsg("Removed contact successfully")
 }
 
 $scope.addNewContact = function() {
@@ -108,7 +112,7 @@ $scope.primaryCheck = function($index) {
 /************** Site Info ***************/
 
 
-//Change icon color
+//Change social media icons to full color
 $scope.changeSocialColor = function (value) {        
         if(value === 2){
         	$scope.iconColor = false;
@@ -119,15 +123,15 @@ $scope.changeSocialColor = function (value) {
     }
 
 
-//Save social media urls
+//Save social media sites
 $scope.saveSocialMedia = function(){
 
-$scope.showSocialUrl = true;
 
 $scope.socialMediaIdArr = [];
 $scope.socialMediaValueArr = [];
 $scope.socialMediaArr = [];
 $scope.socialMediaObj = {}
+$scope.showPreviewSection === false;
 
 
   var elements = document.getElementById("social-form-info").elements;
@@ -135,6 +139,7 @@ $scope.socialMediaObj = {}
 	for (var i = 0, element; element = elements[i++];) {
 	    if (element.value !== "" && element.id !== ""){
 
+            $scope.showPreviewSection = true;
 	    	$scope.socialMediaIdArr.push(element.id);
 	    	$scope.socialMediaValueArr.push(element.value);
 
@@ -164,8 +169,26 @@ $scope.socialMediaObj = {}
         //console.log($scope.socialMediaArr);
      	$scope.socialMediaPreview = $scope.socialMediaArr;
 
+
+     	if($scope.showPreviewSection === true){
+		 callAlertMsg("Scroll down to preview your social media sites below")
+     	}
+
 }   
+/************** Site Info End ***************/
+
+/************** Animation ***************/
+
+function callAlertMsg(msg){
+	$scope.animate = "fade-in";
+	$scope.alertMsg = msg;
+	$timeout(function () {
+	     $scope.animate = "fade-out"
+	   }, 5000);
+}
+
+/************** Animation ***************/
+
 
 }]);
 
-/************** Site Info End ***************/
